@@ -18,9 +18,9 @@ public:
 	int getEmployeeTask();
     void setEmployeeName(string newEmployeeName);
     void setEmployeeId(int newEmployeeId);
-	void setEmployeeWorkingHours(int day);
+	void setEmployeeWorkingHours(int day, int hours);
 	void setEmployeeTask(int newEmployeeTask);
     friend ostream& operator<< (ostream &out, const Employee &it);
     friend istream& operator>> (istream &in, Employee &it);
-    bool operator== (Employee& r);
+    friend bool operator== (Employee& l, Employee& r);
 };
