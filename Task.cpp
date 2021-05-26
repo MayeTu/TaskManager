@@ -4,30 +4,39 @@ using namespace std;
 string Task::getTaskName() {
 	return this->taskName;
 }
+
 int Task::getTaskId() {
 	return this->taskId;
 }
+
 int Task::getTaskWorkHours() {
-	return this->taskWorkHours;
+	return taskWorkHours;
 }
-int Task::getTaskDeadline() {
-	return this->taskDeadline;
+
+int Task::getDeadline() {
+	return taskDeadline;
 }
+
 Status Task::getTaskStatus() {
 	return this->taskStatus;
 }
+
+void Task::setTaskWorkHours(int hours) {
+	this->taskWorkHours = hours;
+}
+
 void Task::setTaskName(string newTaskName) {
 	this->taskName = newTaskName;
 }
+
 void Task::setTaskId(int newTaskId) {
 	this->taskId = newTaskId;
 }
-void Task::setTaskWorkHours(int day) {
-	this->taskWorkHours = day;
+
+void Task::setTaskDeadline(int day) {
+	this->taskDeadline = day;
 }
-void Task::setTaskWorkHours(int day) {
-	this->taskDEadline = day;
-}
+
 void Task::setTaskStatus(int newTaskStatus) {
 	this->taskStatus = static_cast<Status>(newTaskStatus);
 }

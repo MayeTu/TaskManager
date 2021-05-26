@@ -4,27 +4,35 @@ using namespace std;
 string Employee::getEmployeeName() {
 	return employeeName;
 }
+
 int Employee::getEmployeeId() {
 	return employeeId;
 }
+
 int Employee::getEmployeeWorkingHours(int day) {
 	return employeeWorkingHours[day];
 }
+
 int Employee::getEmployeeTask() {
 	return employeeTask;
 }
+
 void Employee::setEmployeeName(string newEmployeeName) {
 	this->employeeName = newEmployeeName;
 }
+
 void Employee::setEmployeeId(int newEmployeeId) {
 	this->employeeId = newEmployeeId;
 }
+
 void Employee::setEmployeeWorkingHours(int day, int hours) {
 	this->employeeWorkingHours[day] = hours;
 }
+
 void Employee::setEmployeeTask(int newEmployeeTask) {
 	this->employeeTask = newEmployeeTask;
 }
+
 ostream& operator<< (ostream& out, const Employee& it) {
 	out << it.employeeName << endl << it.employeeId << " ";
 	for (int i = 0; i < 7; i++) {
@@ -33,6 +41,7 @@ ostream& operator<< (ostream& out, const Employee& it) {
 	out << it.employeeTask << endl;
 	return out;
 }
+
 istream& operator>> (istream& in, Employee& it) {
 	in >> it.employeeName>> it.employeeId;
 	for (int i = 0; i < 7; i++) {
@@ -41,6 +50,7 @@ istream& operator>> (istream& in, Employee& it) {
 	in >> it.employeeTask;
 	return in;
 }
+
 bool operator== (Employee& l, Employee& r) {
 	bool check = true;
 	for (int i = 0; i < 7; i++) {

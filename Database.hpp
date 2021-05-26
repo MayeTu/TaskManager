@@ -2,9 +2,9 @@
 
 using namespace std;
 
-Template <typename T>
+template <typename T>
 
-Database{
+class Database{
 	private:
 		vector <T> elements;
 	public:

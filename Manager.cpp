@@ -2,29 +2,29 @@
 
 using namespace std;
 
-void skip(){
-	for (int i=0;i<basaEmp.getsize();i++){
+void Manager::skip(){
+	for (int i = 0; i<basaEmp.getsize(); i++){
 		if (basaEmp[i].getEmployeeTask() != -1){
 			int code=basaEmp[i].getEmployeeTask();
-			for (int i=1 ; i <= basaTask.getsize() ; i++){
-				if (basaTask[i].getTaskId()==code){
-					basaTask[i].setTaskId()=basaTask[i].getTaskId()-basaEmp.getEmployeeWorkingHours(day)
+			for (int i=1; i <= basaTask.getsize(); i++){
+				if (basaTask[i].getTaskId() == code) {
+					basaTask[i].setTaskId(basaTask[i].getTaskId() - basaEmp[i].getEmployeeWorkingHours(day)); //TODO: what is 'day'?
 					break;
 				}
 			}
 		}
 	}
-	for (int i=0;i<basaTask.getsize();i++){
-		if (basaTask[i].getTaskWorkHours<1){
-			basaTask[i].setStatus(3);
-			for (int i=0; i<basaEmp.getsize();i++){
-				if (basaEmp[i].getEmployeeTask() == basaTask[i].getId()){
+	for (int i = 0; i < basaTask.getsize(); i++){
+		if (basaTask[i].getTaskWorkHours(i) < 1){
+			basaTask[i].setTaskStatus(3);
+			for (int i = 0; i < basaEmp.getsize(); i++){
+				if (basaEmp[i].getEmployeeTask() == basaTask[i].getTaskId()){
 					basaEmp[i].setEmployeeTask(-1);
 				}
 			}
 		}
-		if (basaTask[i].getTaskDeadline() == 0 && basaTask[i].getTaskWorkHours()>0 && basaTask[i].getTaskStatus() != 2){
-			basaTask[i].setTaskStatus(2)
+		if (basaTask[i].getDeadline() == 0 && basaTask[i].getTaskWorkHours(i) > 0 && basaTask[i].getTaskStatus() != 2) {		//TODO: Status != 2 unavailable. Use Status::<someone>
+			basaTask[i].setTaskStatus(2);
 		}
 	}
 	day++;
@@ -125,12 +125,12 @@ void Manager::work(){
 					break;
 				}
 				case 2:{
-					Employee temp;
+					Employee temp;		//TODO: ---> Task or Employee??
 					cout << "enter the name of task \n";
 					string name;
 					cin >> name;
 					temp.setTaskName(name);
-					int id(basaTask.getsize()+1);
+					int id(basaTask.getsize()+1);		//TODO: what is this?
 					temp.setTaskId(id);
 					cout << "enter hours for working \n";
 					int hour;
@@ -162,7 +162,7 @@ void Manager::work(){
 					Employee temp;
 					for (int i=1;i<=basaEmp.getsize();i++){
 						if (basaEmp[i].getEmployeeId()==code){
-							temp=Employees[i];
+							temp=Employees[i];							//TODO: what is this?
 						}
 					}
 					cout << "enter new work hours \n";
@@ -180,7 +180,7 @@ void Manager::work(){
 					Task temp;
 					for (int i=1;i<=basaTask.getsize();i++){
 						if (basaTask[i].getTaskId()==code){
-							temp=Task[i];
+							temp=Task[i];							//TODO: what is this?
 						}
 					}
 					cout << "enter days to deadline \n";
@@ -238,7 +238,7 @@ void Manager::work(){
 			for (int i=1;i<=basaEmp.getsize();i++){
 				if (basaEmp[i].getEmployeeId()==ecode){
 					basaEmp[i].setEmployeeTask(tcode);
-					basaTask[i].setStatus(1);
+					basaTask[i].setTaskStatus(1);
 					break;
 				}
 			}
