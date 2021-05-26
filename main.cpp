@@ -26,26 +26,27 @@ int main(int argc, char** argv1, char** argv2){
 	string taskName=argv[2];
 	ifstram file1;
 	ifstream file2;
-	
 	opening(file1,1);// открываем файлы с бд
 	opening(file2,2);
 	
-	Manager basa;// загружаем бд в оперативную память и закрываем тектовые файлы
-	basa.load(file1);
-	basa.load(file2);
+	Database <Employee> basa1;// загружаем бд в оперативную память и закрываем тектовые файлы
+	Database <Task> basa2;
+	basa1.load(file1);
+	basa2.load(file2);
 	file1.close();
 	file2.close();
 	
-	basa.work();// запускаем работу менеджера 
+	Manager manager(basa1, basa2);
+	manager.work();// запускаем работу менеджера 
 	
 	ofstream file11; //обновляем текстовые файлы бд и закрываем их
 	ofstream file22;
 	opening(file11,1);
 	opening(file22,2);
 	
-	basa.unload(file11);
+	basa1.unload(file11);
 	file11.close();
-	basa.unload(file22);
+	basa2.unload(file22);
 	file22.close();
 	
 	return 0;
