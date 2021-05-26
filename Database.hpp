@@ -26,6 +26,11 @@ Database{
 			return elements.size();
 		}
 		void remove(T elem){
-			
+			for (int i=0; i< elements.size[i];i++){
+				if (elemets[i]==elem){
+					elemets.erase(i);
+					break;
+				}
+			}
 		}
 };

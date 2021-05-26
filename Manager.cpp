@@ -4,8 +4,8 @@ using namespace std;
 
 void skip(){
 	for (int i=0;i<basaEmp.getsize();i++){
-		if (basaEmp[i].getEmployeeTask != -1){
-			int code=basaEmp[i].getEmployeeTask;
+		if (basaEmp[i].getEmployeeTask() != -1){
+			int code=basaEmp[i].getEmployeeTask();
 			for (int i=1 ; i <= basaTask.getsize() ; i++){
 				if (basaTask[i].getTaskId()==code){
 					basaTask[i].setTaskId()=basaTask[i].getTaskId()-basaEmp.getEmployeeWorkingHours(day)
@@ -15,8 +15,19 @@ void skip(){
 		}
 	}
 	for (int i=0;i<basaTask.getsize();i++){
-		
+		if (basaTask[i].getTaskWorkHours<1){
+			basaTask[i].setStatus(3);
+			for (int i=0; i<basaEmp.getsize();i++){
+				if (basaEmp[i].getEmployeeTask() == basaTask[i].getId()){
+					basaEmp[i].setEmployeeTask(-1);
+				}
+			}
+		}
+		if (basaTask[i].getTaskDeadline() == 0 && basaTask[i].getTaskWorkHours()>0 && basaTask[i].getTaskStatus() != 2){
+			basaTask[i].setTaskStatus(2)
+		}
 	}
+	day++;
 }
 
 void Manager::work(){
