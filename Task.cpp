@@ -10,6 +10,9 @@ int Task::getTaskId() {
 int Task::getTaskWorkHours() {
 	return this->taskWorkHours;
 }
+int Task::getTaskDeadline() {
+	return this->taskDeadline;
+}
 Status Task::getTaskStatus() {
 	return this->taskStatus;
 }
@@ -22,17 +25,20 @@ void Task::setTaskId(int newTaskId) {
 void Task::setTaskWorkHours(int day) {
 	this->taskWorkHours = day;
 }
+void Task::setTaskWorkHours(int day) {
+	this->taskDEadline = day;
+}
 void Task::setTaskStatus(int newTaskStatus) {
 	this->taskStatus = static_cast<Status>(newTaskStatus);
 }
 
 ostream& operator<< (ostream& out, const Task& it) {
-	out<< it.taskName <<' '<< it.taskId << ' ' << it.taskWorkHours << ' ' << static_cast<int>(it.taskStatus)<<'\n';
+	out<< it.taskName <<' '<< it.taskId << ' ' << it.taskWorkHours << it.taskDeadline << ' ' << static_cast<int>(it.taskStatus)<<'\n';
 	return out;
 }
 
 istream& operator>> (istream& in, Task& it) {
-	in >> it.taskName >> it.taskId >> it.taskWorkHours;
+	in >> it.taskName >> it.taskId >> it.taskWorkHours >> it.taskDeadline;
 	int s;
 	in >> s;
 	it.taskStatus = static_cast<Status>(s);
@@ -40,6 +46,6 @@ istream& operator>> (istream& in, Task& it) {
 }
 
 bool Task::operator==(Task& r) {
-	if (this->taskName == r.taskName && this->taskId == r.taskId && this->taskWorkHours == r.taskWorkHours && this->taskStatus == r.taskStatus) return true;
+	if (this->taskName == r.taskName && this->taskId == r.taskId && this->taskWorkHours == r.taskWorkHours && this->taskDeadline == r.taskDeadline && this->taskStatus == r.taskStatus) return true;
 	return false;
 }

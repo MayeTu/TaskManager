@@ -3,16 +3,30 @@
 using namespace std;
 
 void skip(){
-	
+	for (int i=0;i<basaEmp.getsize();i++){
+		if (basaEmp[i].getEmployeeTask != -1){
+			int code=basaEmp[i].getEmployeeTask;
+			for (int i=1 ; i <= basaTask.getsize() ; i++){
+				if (basaTask[i].getTaskId()==code){
+					basaTask[i].setTaskId()=basaTask[i].getTaskId()-basaEmp.getEmployeeWorkingHours(day)
+					break;
+				}
+			}
+		}
+	}
+	for (int i=0;i<basaTask.getsize();i++){
+		
+	}
 }
 
 void Manager::work(){
 	cout << "   company task planner" << endl;
 	char num='-1';
-	int day=1;
+	int day=0;
 	while (num!=0){
 		cout << endl;
 		cout << "				day"<<day;
+		//cout << "                  \n";
 		cout << "	Main menu\n";
 		cout << "1) view database\n";
 		cout << "2) find employee\n";
@@ -59,6 +73,7 @@ void Manager::work(){
 			for (int i=1;i<=basaEmp.getsize();i++){
 				if (basaEmp[i].getEmployeeId()==code){
 					cout << basaEmp[i] << endl;
+					break;
 				}
 			}
 			break;
@@ -70,6 +85,7 @@ void Manager::work(){
 			for (int i=1;i<=basaTask.getsize();i++){
 				if (basaTask[i].getTaskId()==code){
 					cout << basaTask[i] << endl;
+					break;
 				}
 			}
 			break;
@@ -129,6 +145,15 @@ void Manager::work(){
 			cin >> a;
 			switch(a){
 				case 1:{
+					cout << "employee's id \n";
+					int code;
+					cin >> code;
+					Employee temp;
+					for (int i=1;i<=basaEmp.getsize();i++){
+						if (basaEmp[i].getEmployeeId()==code){
+							temp=Employees[i];
+						}
+					}
 					cout << "enter new work hours \n";
 					int hour;
 					for (int i=0;i<7;i++){
@@ -138,6 +163,15 @@ void Manager::work(){
 					break;
 				}
 				case 2:{
+					cout << "task's id \n";
+					int code;
+					cin >> code;
+					Task temp;
+					for (int i=1;i<=basaTask.getsize();i++){
+						if (basaTask[i].getTaskId()==code){
+							temp=Task[i];
+						}
+					}
 					cout << "enter days to deadline \n";
 					int days;
 					cin >> days;
@@ -193,6 +227,7 @@ void Manager::work(){
 			for (int i=1;i<=basaEmp.getsize();i++){
 				if (basaEmp[i].getEmployeeId()==ecode){
 					basaEmp[i].setEmployeeTask(tcode);
+					basaTask[i].setStatus(1);
 					break;
 				}
 			}
