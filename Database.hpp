@@ -1,10 +1,12 @@
 #include <vector>
+#include "Employee.hpp"
+#include "Task.hpp"
 
 using namespace std;
 
-Template <typename T>
+template <typename T>
 
-Database{
+class Database{
 	private:
 		vector <T> elements;
 	public:
@@ -26,9 +28,9 @@ Database{
 			return elements.size();
 		}
 		void remove(T elem){
-			for (int i=0; i< elements.size[i];i++){
-				if (elemets[i]==elem){
-					elemets.erase(i);
+			for (int i=0; i< elements.size();i++){
+				if (elements[i]==elem){
+					elements.erase(elements.begin()+i);
 					break;
 				}
 			}

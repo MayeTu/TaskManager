@@ -14,7 +14,7 @@ int Task::getTaskDeadline() {
 	return this->taskDeadline;
 }
 Status Task::getTaskStatus() {
-	return this->taskStatus;
+///	return this->taskStatus;
 }
 void Task::setTaskName(string newTaskName) {
 	this->taskName = newTaskName;
@@ -25,11 +25,11 @@ void Task::setTaskId(int newTaskId) {
 void Task::setTaskWorkHours(int day) {
 	this->taskWorkHours = day;
 }
-void Task::setTaskWorkHours(int day) {
-	this->taskDEadline = day;
+void Task::setTaskDeadline(int day) {
+	this->taskDeadline = day;
 }
-void Task::setTaskStatus(int newTaskStatus) {
-	this->taskStatus = static_cast<Status>(newTaskStatus);
+void Task::setTaskStatus(Status newTaskStatus) {
+	this->taskStatus = newTaskStatus;
 }
 
 ostream& operator<< (ostream& out, const Task& it) {

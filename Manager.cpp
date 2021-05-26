@@ -2,29 +2,29 @@
 
 using namespace std;
 
-void skip(){
+void Manager::skip(){
 	for (int i=0;i<basaEmp.getsize();i++){
 		if (basaEmp[i].getEmployeeTask() != -1){
 			int code=basaEmp[i].getEmployeeTask();
-			for (int i=1 ; i <= basaTask.getsize() ; i++){
-				if (basaTask[i].getTaskId()==code){
-					basaTask[i].setTaskId()=basaTask[i].getTaskId()-basaEmp.getEmployeeWorkingHours(day)
+			for (int j=1 ; j <= basaTask.getsize() ; j++){
+				if (basaTask[j].getTaskId()==code){
+					basaTask[j].setTaskWorkHours(basaTask[j].getTaskWorkHours()-basaEmp[i].getEmployeeWorkingHours(day));
 					break;
 				}
 			}
 		}
 	}
 	for (int i=0;i<basaTask.getsize();i++){
-		if (basaTask[i].getTaskWorkHours<1){
-			basaTask[i].setStatus(3);
+		if (basaTask[i].getTaskWorkHours()<1){
+			basaTask[i].setTaskStatus(Status::Done);
 			for (int i=0; i<basaEmp.getsize();i++){
-				if (basaEmp[i].getEmployeeTask() == basaTask[i].getId()){
+				if (basaEmp[i].getEmployeeTask() == basaTask[i].getTaskId()){
 					basaEmp[i].setEmployeeTask(-1);
 				}
 			}
 		}
-		if (basaTask[i].getTaskDeadline() == 0 && basaTask[i].getTaskWorkHours()>0 && basaTask[i].getTaskStatus() != 2){
-			basaTask[i].setTaskStatus(2)
+		if (basaTask[i].getTaskDeadline() == 0 && basaTask[i].getTaskWorkHours()>0 && basaTask[i].getTaskStatus() !=Status::Failed ){
+			basaTask[i].setTaskStatus(Status::Failed);
 		}
 	}
 	day++;
@@ -49,7 +49,7 @@ void Manager::work(){
 		cout << "8)	pass some days\n";
 		cout << endl;
 		cout << "0)exit\n";
-		
+
 	cin >> num;
 	switch(num){
 		case '1':{
@@ -125,7 +125,7 @@ void Manager::work(){
 					break;
 				}
 				case 2:{
-					Employee temp;
+					Task temp;
 					cout << "enter the name of task \n";
 					string name;
 					cin >> name;
@@ -134,12 +134,12 @@ void Manager::work(){
 					temp.setTaskId(id);
 					cout << "enter hours for working \n";
 					int hour;
-					temp.setEmployeeWorkHours(i,hour);
+					temp.setTaskWorkHours(hour);
 					cout << "enter days to deadline \n";
 					int days;
 					cin >> days;
-					temp.setTaskDeadline(hour);
-					temp.setEmployeeTaskStatus(Status::toBeDone);
+					temp.setTaskDeadline(days);
+					temp.setTaskStatus(Status::ToBeDone);
 					break;
 				}
 				default:{
@@ -162,7 +162,7 @@ void Manager::work(){
 					Employee temp;
 					for (int i=1;i<=basaEmp.getsize();i++){
 						if (basaEmp[i].getEmployeeId()==code){
-							temp=Employees[i];
+							temp=basaEmp[i];
 						}
 					}
 					cout << "enter new work hours \n";
@@ -180,7 +180,7 @@ void Manager::work(){
 					Task temp;
 					for (int i=1;i<=basaTask.getsize();i++){
 						if (basaTask[i].getTaskId()==code){
-							temp=Task[i];
+							temp=basaTask[i];
 						}
 					}
 					cout << "enter days to deadline \n";
@@ -238,7 +238,7 @@ void Manager::work(){
 			for (int i=1;i<=basaEmp.getsize();i++){
 				if (basaEmp[i].getEmployeeId()==ecode){
 					basaEmp[i].setEmployeeTask(tcode);
-					basaTask[i].setStatus(1);
+					basaTask[i].setTaskStatus(Status::Working);
 					break;
 				}
 			}
