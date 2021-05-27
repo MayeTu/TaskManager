@@ -1,0 +1,70 @@
+\hypertarget{_database_8hpp}{}\doxysection{Файл D\+:/\+Projects/\+Project/\+Database.hpp}
+\label{_database_8hpp}\index{D:/Projects/Project/Database.hpp@{D:/Projects/Project/Database.hpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_database_8hpp_a64ad9eb42d000c4c97a3918c057b976a}{load}} (ifstream \&file)
+\item 
+void \mbox{\hyperlink{_database_8hpp_a10a20ecd0c45de4a10746677b4a1b35a}{unload}} (ofstream \&file)
+\item 
+T \mbox{\hyperlink{_database_8hpp_a65bd299e8713016fb249940c6d991200}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\item 
+int \mbox{\hyperlink{_database_8hpp_a7541a1fae58d808b6646452567e98987}{getsize}} ()
+\item 
+void \mbox{\hyperlink{_database_8hpp_a2033a64bf7828509616cabd1343a5144}{remove}} (T elem)
+\end{DoxyCompactItemize}
+\doxysubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+Template$<$ typename T $>$ \mbox{\hyperlink{_database_8hpp_a14bebd2fad415e108654e88071c76d5a}{Database}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{_database_8hpp_a7541a1fae58d808b6646452567e98987}\label{_database_8hpp_a7541a1fae58d808b6646452567e98987}} 
+\index{Database.hpp@{Database.hpp}!getsize@{getsize}}
+\index{getsize@{getsize}!Database.hpp@{Database.hpp}}
+\doxysubsubsection{\texorpdfstring{getsize()}{getsize()}}
+{\footnotesize\ttfamily int getsize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_database_8hpp_a64ad9eb42d000c4c97a3918c057b976a}\label{_database_8hpp_a64ad9eb42d000c4c97a3918c057b976a}} 
+\index{Database.hpp@{Database.hpp}!load@{load}}
+\index{load@{load}!Database.hpp@{Database.hpp}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void load (\begin{DoxyParamCaption}\item[{ifstream \&}]{file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_database_8hpp_a65bd299e8713016fb249940c6d991200}\label{_database_8hpp_a65bd299e8713016fb249940c6d991200}} 
+\index{Database.hpp@{Database.hpp}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Database.hpp@{Database.hpp}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily T operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_database_8hpp_a2033a64bf7828509616cabd1343a5144}\label{_database_8hpp_a2033a64bf7828509616cabd1343a5144}} 
+\index{Database.hpp@{Database.hpp}!remove@{remove}}
+\index{remove@{remove}!Database.hpp@{Database.hpp}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void remove (\begin{DoxyParamCaption}\item[{T}]{elem }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_database_8hpp_a10a20ecd0c45de4a10746677b4a1b35a}\label{_database_8hpp_a10a20ecd0c45de4a10746677b4a1b35a}} 
+\index{Database.hpp@{Database.hpp}!unload@{unload}}
+\index{unload@{unload}!Database.hpp@{Database.hpp}}
+\doxysubsubsection{\texorpdfstring{unload()}{unload()}}
+{\footnotesize\ttfamily void unload (\begin{DoxyParamCaption}\item[{ofstream \&}]{file }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Переменные}
+\mbox{\Hypertarget{_database_8hpp_a14bebd2fad415e108654e88071c76d5a}\label{_database_8hpp_a14bebd2fad415e108654e88071c76d5a}} 
+\index{Database.hpp@{Database.hpp}!Database@{Database}}
+\index{Database@{Database}!Database.hpp@{Database.hpp}}
+\doxysubsubsection{\texorpdfstring{Database}{Database}}
+{\footnotesize\ttfamily Template$<$typename T$>$ Database}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{private}:}
+\DoxyCodeLine{        vector <T> elements}
+
+\end{DoxyCode}
