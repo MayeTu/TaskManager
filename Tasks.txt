@@ -1,0 +1,90 @@
+Look at the monitor(make sure you look busy)
+2 -5673 18
+Done
+Brew some coffee
+3 -6032 -2
+Done
+Conqeur the world
+4 -5408 20
+Done
+Send some faxes(like a boss)
+5 -5183 -1
+Done
+Find the Zodiac Killer
+6 -2492 0
+Done
+Make sure you workroom is clean
+6 1 0
+Failed
+Don't be productive at all(get some rest, you did good)
+7 -4019 -2
+Done
+Prepare yearly workbook
+8 -4609 27
+Done
+Prepare for office photosession(you look awesome, don't worry, just come by)
+9 -5769 17
+Done
+Learn how to balance on rope
+10 10 0
+Failed
+Clean your office with just a toothbrush
+11 -4746 18
+Done
+Drink ten botles of coke
+12 -3316 -2
+Done
+Make sure your office build in feng shui style
+13 -5542 0
+Done
+Replant all plants
+14 -4013 7
+Done
+Watch TV
+15 -4596 25
+Done
+Write the program for controling workflow
+16 -4238 10
+Done
+Sell the broken table for 300$
+17 -4716 14
+Done
+Transend into Nirvana
+18 -4673 0
+Done
+Watch TikTok
+19 -5870 -1
+Done
+Eat some delisuos food 
+20 -5468 -2
+Done
+Play BlackJack 
+21 10 0
+Failed
+Create a masterpiece
+22 19 0
+Failed
+Buy cute cristmas socks for all
+23 2 0
+Failed
+Make slumber party at helloween
+24 12 0
+Failed
+Create a logo for office
+25 76 0
+Failed
+Buy a uniform for the team
+26 7 0
+Failed
+Work, like you should
+27 88 0
+Failed
+Find out and watch about Jorge Fight
+28 3 0
+Failed
+Wash our pet gorrila 6 times
+29 10 0
+Failed
+Watch BostonDynamics
+30 89 0
+Failed
