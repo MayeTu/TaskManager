@@ -1,0 +1,62 @@
+\doxysubsection{Класс Employee}
+\label{class_employee}\index{Employee@{Employee}}
+
+
+Класс сотрудников  
+
+
+
+
+{\ttfamily \#include $<$Employee.\+hpp$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_employee_a4cc3d3f6e1cb32bc98a4063616bfabea}} 
+string \textbf{ get\+Employee\+Name} ()
+\begin{DoxyCompactList}\small\item\em Функция вывода имени сотрудника. \end{DoxyCompactList}\item 
+\mbox{\label{class_employee_ae6e99d450698a596c9087e6ee9fd8271}} 
+int \textbf{ get\+Employee\+Id} ()
+\begin{DoxyCompactList}\small\item\em Функция вывода id сотрудника. \end{DoxyCompactList}\item 
+\mbox{\label{class_employee_a8d88057eacc68fd4d40dc6b402db3546}} 
+int \textbf{ get\+Employee\+Working\+Hours} (int day)
+\begin{DoxyCompactList}\small\item\em Функция вывода количества рабочих часов в неделю. \end{DoxyCompactList}\item 
+\mbox{\label{class_employee_acd58345af852afc2c9026e576ca8059b}} 
+int \textbf{ get\+Employee\+Task} ()
+\begin{DoxyCompactList}\small\item\em Функция вывода задачи сотрудника. \end{DoxyCompactList}\item 
+\mbox{\label{class_employee_a984614600d392019a2bc2c43e6638a8a}} 
+void \textbf{ set\+Employee\+Name} (string new\+Employee\+Name)
+\begin{DoxyCompactList}\small\item\em Функция присваивания имени новому сотруднику. \end{DoxyCompactList}\item 
+\mbox{\label{class_employee_a77d12a57c48bbc00d92fd75cc481a263}} 
+void \textbf{ set\+Employee\+Id} (int new\+Employee\+Id)
+\begin{DoxyCompactList}\small\item\em Функция присваивания id новому сотруднику. \end{DoxyCompactList}\item 
+\mbox{\label{class_employee_a822b5bf7e785faac66cc4f17a98548ab}} 
+void \textbf{ set\+Employee\+Working\+Hours} (int day, int hours)
+\begin{DoxyCompactList}\small\item\em Функция присваивания количества рабочих часов в неделю новому сотруднику. \end{DoxyCompactList}\item 
+\mbox{\label{class_employee_acb05fea98a5079bafcdc4b1fdcb1f78c}} 
+void \textbf{ set\+Employee\+Task} (int new\+Employee\+Task)
+\begin{DoxyCompactList}\small\item\em Функция присваивания задачи новому сотруднику. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Друзья}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_employee_a73d706c119017033f2648df78b47d4dc}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&out, const \textbf{ Employee} \&it)
+\item 
+\mbox{\label{class_employee_a38fee40c6415d4a3e4ef3e4cd0123012}} 
+istream \& {\bfseries operator$>$$>$} (istream \&in, \textbf{ Employee} \&it)
+\item 
+\mbox{\label{class_employee_a47708a54503e50650a66859cd2f5daaa}} 
+bool {\bfseries operator==} (\textbf{ Employee} \&l, \textbf{ Employee} \&r)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Подробное описание}
+Класс сотрудников 
+
+Данный класс отображает наличие у сотридника\+:имени,id,количества рабочих часов в неделю и его задачи.~\newline
+Помимо этого,класс позволяет присвоить новое значение имени сотрудника,id сотрудника,количества рабочих часов в неделю и его задачу. 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Projects/\+Project/Employee.\+hpp\item 
+D\+:/\+Projects/\+Project/Employee.\+cpp\end{DoxyCompactItemize}
