@@ -40,7 +40,7 @@ public:
     }
     void remove(T elem)
     {
-        for (int i=0; i< elements.size(); i++)
+        for (size_t i=0; i< elements.size(); i++)
         {
             if (elements[i]==elem)
             {

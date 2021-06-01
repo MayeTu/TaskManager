@@ -1,4 +1,4 @@
-CFLAGS=-c -Wall
+CFLAGS=-c -Wall -Wextra -Wpedantic
 
 all: taskManager
 
