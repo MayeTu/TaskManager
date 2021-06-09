@@ -11,7 +11,6 @@ enum class Status
     Failed,
     Done
 };
-
 /*!
  *  \brief Класс задач для сотрудников.
  *
