@@ -17,7 +17,7 @@ private:
     int employeeWorkingHours[7];
     int employeeTask;
 public:
-///Функция вывода id сотрудника.
+///Функция вывода имени сотрудника.
     string getEmployeeName();
 ///Функция вывода id сотрудника.
     int getEmployeeId();
@@ -26,16 +26,10 @@ public:
 ///Функция вывода задачи сотрудника.
     int getEmployeeTask();
 ///Функция присваивания имени новому сотруднику.
-    int getEmployeeWorkingHours(int day);
-///Функция вывода задачи сотрудника.
-    int getEmployeeTask();
-///Функция присваивания имени новому сотруднику.
     void setEmployeeName(string newEmployeeName);
 ///Функция присваивания id новому сотруднику.
     void setEmployeeId(int newEmployeeId);
 ///Функция присваивания количества рабочих часов в неделю новому сотруднику.
-    void setEmployeeWorkingHours(int day, int hours);
-///Функция присваивания задачи новому сотруднику.
     void setEmployeeWorkingHours(int day, int hours);
 ///Функция присваивания задачи новому сотруднику.
     void setEmployeeTask(int newEmployeeTask);
