@@ -1,0 +1,91 @@
+Look at the monitor(make sure you look busy)
+2 73 18
+Working
+Brew some coffee
+3 32 6
+Working
+Conqeur the world
+4 8 20
+Working
+Send some faxes(like a boss)
+5 83 30
+Working
+Find the Zodiac Killer
+6 92 50
+Working
+Make sure you workroom is clean
+6 1 0
+Working
+Don't be productive at all(get some rest, you did good)
+7 19 21
+Working
+Prepare yearly workbook
+8 9 7
+Working
+Prepare for office photosession(you look awesome, don't worry, just come by)
+9 69 17
+Working
+Learn how to balance on rope
+10 10 6
+Working
+Clean your office with just a toothbrush
+11 46 18
+Working
+Drink ten botles of coke
+12 16 2
+Working
+Make sure your office build in feng shui style
+13 42 30
+Working
+Replant all plants
+14 13 7
+Working
+Watch TV
+15 96 25
+Working
+Write the program for controling workflow
+16 38 10
+Working
+Sell the broken table for 300$
+17 16 14
+Working
+Transend into Nirvana
+18 73 20
+Working
+Watch TikTok
+19 70 39
+Working
+Eat some delisuos food 
+20 68 27
+Working
+Play BlackJack 
+21 10 23
+ToBeDone
+Create a masterpiece
+22 19 11
+ToBeDone
+Buy cute cristmas socks for all
+23 222 23
+ToBeDone
+Make slumber party at helloween
+24 12 5
+ToBeDone
+Create a logo for office
+25 76 44
+ToBeDone
+Buy a uniform for the team
+26 7 56
+ToBeDone
+Work, like you should
+27 88 23
+ToBeDone
+Find out and watch about Jorge Fight
+28 3 4
+ToBeDone
+Wash our pet gorrila 6 times
+29 10 3
+ToBeDone
+Watch BostonDynamics
+30 89 4
+ToBeDone
+
