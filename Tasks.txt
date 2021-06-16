@@ -1,84 +1,84 @@
 Look at the monitor(make sure you look busy)
-2 -5673 18
-Done
+2 57 14
+Working
 Brew some coffee
-3 -6032 -2
-Done
+3 3 2
+Working
 Conqeur the world
-4 -5408 20
+4 1 0
 Done
 Send some faxes(like a boss)
-5 -5183 -1
-Done
+5 72 26
+Working
 Find the Zodiac Killer
-6 -2492 0
-Done
+6 78 46
+Working
 Make sure you workroom is clean
 6 1 0
-Failed
+Working
 Don't be productive at all(get some rest, you did good)
-7 -4019 -2
-Done
+7 19 17
+Working
 Prepare yearly workbook
-8 -4609 27
+8 1 0
 Done
 Prepare for office photosession(you look awesome, don't worry, just come by)
-9 -5769 17
-Done
+9 50 13
+Working
 Learn how to balance on rope
-10 10 0
-Failed
+10 10 2
+Working
 Clean your office with just a toothbrush
-11 -4746 18
-Done
+11 46 14
+Working
 Drink ten botles of coke
-12 -3316 -2
+12 1 0
 Done
 Make sure your office build in feng shui style
-13 -5542 0
-Done
+13 22 26
+Working
 Replant all plants
-14 -4013 7
+14 1 0
 Done
 Watch TV
-15 -4596 25
-Done
+15 82 21
+Working
 Write the program for controling workflow
-16 -4238 10
-Done
+16 20 6
+Working
 Sell the broken table for 300$
-17 -4716 14
+17 1 0
 Done
 Transend into Nirvana
-18 -4673 0
-Done
+18 56 16
+Working
 Watch TikTok
-19 -5870 -1
-Done
+19 39 35
+Working
 Eat some delisuos food 
-20 -5468 -2
-Done
+20 44 23
+Working
 Play BlackJack 
-21 10 0
-Failed
+21 10 19
+ToBeDone
 Create a masterpiece
-22 19 0
-Failed
+22 19 7
+ToBeDone
 Buy cute cristmas socks for all
-23 2 0
-Failed
+23 222 19
+ToBeDone
 Make slumber party at helloween
-24 12 0
-Failed
+24 12 1
+ToBeDone
 Create a logo for office
-25 76 0
-Failed
+25 76 40
+ToBeDone
 Buy a uniform for the team
-26 7 0
-Failed
+26 7 52
+ToBeDone
 Work, like you should
-27 88 0
-Failed
+27 88 19
+ToBeDone
 Find out and watch about Jorge Fight
 28 3 0
 Failed
