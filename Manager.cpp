@@ -21,6 +21,9 @@ void Manager::skip()
     }
     for (int i=0; i<basaTask.getsize(); i++)
     {
+        if (basaTask[i].getTaskStatus()==Status::ToBeDone || basaTask[i].getTaskStatus()==Status::Working){
+            basaTask[i].setTaskDeadline(basaTask[i].getTaskDeadline()-1);
+        }
         if (basaTask[i].getTaskWorkHours()<1)
         {
             basaTask[i].setTaskStatus(Status::Done);
@@ -36,9 +39,14 @@ void Manager::skip()
         {
             basaTask[i].setTaskStatus(Status::Failed);
         }
-        if (basaTask[i].getTaskStatus()==Status::ToBeDone || basaTask[i].getTaskStatus()==Status::Working){
-            basaTask[i].setTaskDeadline(basaTask[i].getTaskDeadline()-1);
+        if (basaTask[i].getTaskDeadline() < 0){
+            basaTask[i].setTaskDeadline(0);
         }
+        if (basaTask[i].getTaskWorkHours() < 0 || basaTask[i].getTaskStatus() == Status::Done){
+            basaTask[i].setTaskWorkHours(-1);
+            basaTask[i].setTaskDeadline(0);
+        }
+
     }
     day++;
 }
@@ -46,9 +54,9 @@ void Manager::skip()
 void Manager::work()
 {
     cout << "   company task planner" << endl;
-    char num='-1';
+    char num{};
     int day=0;
-    while (num!=0)
+    while (num!='0')
     {
         cout << endl;
         cout << "				day "<<day;
@@ -103,30 +111,40 @@ void Manager::work()
         case '2':
         {
             cout << "enter employee's id \n";
-            int code;
+            int code,k;
+            k=0;
             cin >> code;
             for (int i=0; i<basaEmp.getsize(); i++)
             {
                 if (basaEmp[i].getEmployeeId()==code)
                 {
                     cout << basaEmp[i] << endl;
+                    k=1;
                     break;
                 }
+            }
+            if (k==0){
+                cout << "   there is no such person \n" ;
             }
             break;
         }
         case '3':
         {
             cout << "enter task's id \n";
-            int code;
+            int code,k;
+            k=0;
             cin >> code;
             for (int i=0; i<basaTask.getsize(); i++)
             {
                 if (basaTask[i].getTaskId()==code)
                 {
                     cout << basaTask[i] << endl;
+                    k=1;
                     break;
                 }
+            }
+            if (k==0){
+                cout << "   there is no such person \n" ;
             }
             break;
         }
@@ -202,12 +220,13 @@ void Manager::work()
                 cout << "employee's id \n";
                 int code;
                 cin >> code;
-                Employee temp;
+                Employee *temp;
                 for (int i=0; i<basaEmp.getsize(); i++)
                 {
                     if (basaEmp[i].getEmployeeId()==code)
                     {
-                        temp=basaEmp[i];
+                        temp=&basaEmp[i];
+                        break;
                     }
                 }
                 cout << "enter new work hours \n";
@@ -215,7 +234,7 @@ void Manager::work()
                 for (int i=0; i<7; i++)
                 {
                     cin >> hour;
-                    temp.setEmployeeWorkingHours(i,hour);
+                    temp->setEmployeeWorkingHours(i,hour);
                 }
                 break;
             }
@@ -224,18 +243,18 @@ void Manager::work()
                 cout << "task's id \n";
                 int code;
                 cin >> code;
-                Task temp;
+                Task *temp;
                 for (int i=0; i<basaTask.getsize(); i++)
                 {
                     if (basaTask[i].getTaskId()==code)
                     {
-                        temp=basaTask[i];
+                        temp=&basaTask[i];
                     }
                 }
                 cout << "enter days to deadline \n";
                 int days;
                 cin >> days;
-                temp.setTaskDeadline(days);
+                temp->setTaskDeadline(days);
                 break;
             }
             default:
@@ -277,7 +296,14 @@ void Manager::work()
                 {
                     if (basaTask[i].getTaskId()==code)
                     {
-                        basaTask.remove(basaTask[i]);
+						basaTask.remove(basaTask[i]);
+                    }
+                }
+				for (int i=0; i<basaEmp.getsize(); i++)
+                {
+                    if (basaEmp[i].getEmployeeTask()==code)
+                    {
+                        basaEmp[i].setEmployeeTask(-1);
                     }
                 }
                 break;
@@ -297,10 +323,10 @@ void Manager::work()
             cin >> ecode >> tcode;
             for (int i=0; i<basaEmp.getsize(); i++)
             {
-                cout << "0000";
+                //cout << "0000";
                 if (basaEmp[i].getEmployeeId()==ecode)
                 {
-                    cout << 111;
+                    //cout << 111;
                     basaEmp[i].setEmployeeTask(tcode);
                     basaTask[i].setTaskStatus(Status::Working);
                     break;
